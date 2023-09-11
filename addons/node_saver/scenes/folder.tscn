@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://wtorp0gjsh0"]
+
+[ext_resource type="Script" path="res://addons/node_saver/scripts/folder.gd" id="1_rhi4i"]
+[ext_resource type="Texture2D" uid="uid://fve40h0qln77" path="res://addons/node_saver/icons/GuiTreeArrowDown.svg" id="2_yjtjt"]
+[ext_resource type="Texture2D" uid="uid://b3ob8315n7trc" path="res://addons/node_saver/icons/StatusWarning.svg" id="3_edhqp"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_rhxpb"]
+
+[node name="folder" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rhi4i")
+
+[node name="header" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="fold" type="Button" parent="header"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = " (0)"
+icon = ExtResource("2_yjtjt")
+
+[node name="lost" type="OptionButton" parent="header"]
+visible = false
+layout_mode = 2
+theme_override_icons/arrow = SubResource("ImageTexture_rhxpb")
+alignment = 2
+clip_text = true
+icon_alignment = 1
+item_count = 1
+selected = 0
+fit_to_longest_item = false
+popup/item_0/text = "  setter/getter not found"
+popup/item_0/icon = ExtResource("3_edhqp")
+popup/item_0/id = -1
+popup/item_0/separator = true
+
+[node name="properties" type="VBoxContainer" parent="."]
+layout_mode = 2

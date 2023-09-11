@@ -1,0 +1,14 @@
+extends "res://addons/object_saver/scripts/resource.gd"
+
+func save_object(obj:%s)->void:
+	_save_object(obj, GETTERS)
+
+func load_object(obj:%s)->void:
+	_load_object(obj, SETTERS)
+
+func set_data(data:Dictionary)->void:
+	assert_data(data, SETTERS)
+	_data = data
+
+const SETTERS = %s
+const GETTERS = %s

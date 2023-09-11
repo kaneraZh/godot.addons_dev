@@ -1,0 +1,110 @@
+[gd_scene load_steps=5 format=3 uid="uid://dff53sge37ays"]
+
+[ext_resource type="Script" path="res://addons/node_saver/scripts/dock.gd" id="1_xjwfd"]
+[ext_resource type="Texture2D" uid="uid://dcnda0jo0lrpm" path="res://addons/node_saver/icons/Add.svg" id="4_gc1td"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kfxux"]
+bg_color = Color(0.128906, 0.148438, 0.179688, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hfhx8"]
+bg_color = Color(0.0820313, 0.09375, 0.117188, 1)
+
+[node name="Saver" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xjwfd")
+
+[node name="title" type="LineEdit" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+placeholder_text = "Name of the class"
+
+[node name="actions" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="load" type="Button" parent="actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Load settings from file"
+
+[node name="save" type="Button" parent="actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Save settings in file"
+
+[node name="Panel" type="PanelContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_kfxux")
+metadata/_edit_group_ = true
+
+[node name="container" type="VBoxContainer" parent="Panel"]
+layout_mode = 2
+
+[node name="header" type="PanelContainer" parent="Panel/container"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hfhx8")
+
+[node name="organizer" type="HBoxContainer" parent="Panel/container/header"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/container/header/organizer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "property"
+horizontal_alignment = 1
+clip_text = true
+
+[node name="VSeparator" type="VSeparator" parent="Panel/container/header/organizer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="Panel/container/header/organizer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "setter"
+horizontal_alignment = 1
+
+[node name="VSeparator2" type="VSeparator" parent="Panel/container/header/organizer"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="Panel/container/header/organizer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "getter"
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/container"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="property_container" type="VBoxContainer" parent="Panel/container/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="extra" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="adder" type="Button" parent="extra"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "add method"
+icon = ExtResource("4_gc1td")
+
+[node name="setter" type="LineEdit" parent="extra"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "setter_method"
+
+[node name="getter" type="LineEdit" parent="extra"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "getter_method"
+
+[node name="singleton" type="Button" parent="."]
+layout_mode = 2
+text = "rebuild saver singleton"

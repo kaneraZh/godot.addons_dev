@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7b5apckhffm0"]
+
+[ext_resource type="Script" path="res://addons/node_saver/scripts/property.gd" id="1_slrl5"]
+
+[node name="property" type="HBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_slrl5")
+
+[node name="active" type="CheckBox" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "property"
+clip_text = true
+
+[node name="setter" type="LineEdit" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "set_property"
+
+[node name="getter" type="LineEdit" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "get_property"
