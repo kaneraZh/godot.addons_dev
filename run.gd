@@ -79,7 +79,6 @@ static var TYPES_EMPTY:Array = [
 	PackedVector3Array(),
 	PackedColorArray()
 ]
-
 func stringed():
 	print("-------------%s\n%s"%["bool", JSON.stringify(bool())])
 	print("-------------%s\n%s"%["int", JSON.stringify(int())])
@@ -140,7 +139,7 @@ func string_parse_typecast():
 	print("---------PackedStringArray\t:\t%s\n%s"%[PackedStringArray(JSON.parse_string( JSON.stringify(PackedStringArray()))) is PackedStringArray, JSON.parse_string( JSON.stringify(PackedStringArray()))] )
 
 func _run():
-	var regex:RegEx = RegEx.create_from_string("\"(\\d)(\\d)(\\d)\"")
+#	var regex:RegEx = RegEx.create_from_string("\"(\\d)(\\d)(\\d)\"")
 #	create_from_string("\"(?:\\\\.|[^\"])*\"")
 #	compile("/(\d)(\d)(\d)")
 #	RegEx.create_from_string("(\d)(\d)(\d)")
@@ -152,5 +151,29 @@ func _run():
 #	var res:RegExMatch = regex.search("123abc")
 #	print(res)
 	
-	print(regex.compile("123abc"))
-	print(regex)
+#	print(regex.compile("123abc"))
+#	print(regex)
+	var subject := "abc"
+	var pattern := "."
+	var callback := func(text:String) -> String: return text + "&"
+
+	var regex := RegEx.new()
+	regex.compile(pattern)
+
+	var regex_matches := regex.search_all(subject)
+	var offset := 0
+	for regex_match in regex_matches:
+		var start := regex_match.get_start()
+		var end := regex_match.get_end()
+		var length := end - start
+		var text := subject.substr(start + offset, length)
+#		var replacement := str(callback.call(text))
+		var replacement := "&%s"%text
+		subject = (
+			subject.substr(0, start + offset)
+			+ replacement
+			+ subject.substr(end + offset)
+		)
+		offset += replacement.length() - text.length()
+
+	prints(subject)

@@ -13,6 +13,9 @@ static func s(v):
 	if(v is Vector4i):	return "v(%s, %s, %s, %s)"%	[v.x, v.y, v.z, v.w] #"v(0, 0, 0, 0)"
 	if(v is Quaternion):return "q(%s, %s, %s, %s)"%	[v.x, v.y, v.z, v.w] #"q(0, 0, 0, 1)"
 	if(v is Color):		return "c(%s, %s, %s, %s)"%	[v.r, v.g, v.b, v.a] #"c(0, 0, 0, 1)"
+#	^[vcq]\((%s(,\s)?)+\)$
+#	for all the basic ones
+	
 	if(v is Rect2):		return "[P: %s, S: %s]"%	[s(v.position), s(v.size)]	#"[P: v(0, 0), S: v(0, 0)]"
 	if(v is Rect2i):	return "[P: %s, S: %s]"%	[s(v.position), s(v.size)]	#"[P: v(0, 0), S: v(0, 0)]"
 	if(v is Transform2D):return "[X: %s, Y: %s, O: %s]"%[s(v.x), s(v.y), s(v.origin)]	#"[X: v(1, 0), Y: v(0, 1), O: v(0, 0)]"
@@ -23,6 +26,9 @@ static func s(v):
 #	if(v is Projection):return "\n1, 0, 0, 0\n0, 1, 0, 0\n0, 0, 1, 0\n0, 0, 0, 1" #"\n1, 0, 0, 0\n0, 1, 0, 0\n0, 0, 1, 0\n0, 0, 0, 1"
 	if(v is Transform3D):return "[B: %s, O: %s]"%[s(v.basis), s(v.origin)] #"[B: [X: v(1, 0, 0), Y: v(0, 1, 0), Z: v(0, 0, 1)], O: v(0, 0, 0)]"
 	if(v is Projection):return "[X: %s, Y: %s, Z: %s, W: %s]"%[s(v.x), s(v.y), s(v.z), s(v.w)] #"[X: v(1, 0, 0, 0), Y: v(0, 1, 0, 0), Z: v(0, 0, 1, 0), W: v(0, 0, 0, 1)]"
+#	^\[([XYZWPSNDBO]\:\s\%s(\,\s)?)+\]$
+#	for all the ones that nest basic ones
+	
 	if(v is StringName):return "&%s"%v#""
 	if(v is NodePath):	return "$%s"%v#""
 	if(v is RID):		return "r%s"#"RID(0)"
