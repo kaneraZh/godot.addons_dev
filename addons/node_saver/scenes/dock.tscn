@@ -29,12 +29,12 @@ layout_mode = 2
 [node name="load" type="Button" parent="actions"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Load settings from file"
+text = "Load file"
 
 [node name="save" type="Button" parent="actions"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Save settings in file"
+text = "Save file"
 
 [node name="Panel" type="PanelContainer" parent="."]
 layout_mode = 2
