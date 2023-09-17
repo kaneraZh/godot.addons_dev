@@ -1,0 +1,23 @@
+extends Node
+
+var memory:Dictionary
+const file_directory:String = "user://%s.cfg"
+
+func save_file(file_name:String)->int:
+	var file:FileAccess = open(file_directory%file_name, ModeFlags.WRITE)
+	file.store_string(JSON.stringify(memory, ))
+
+func save_main_scene(group:StringName)->int:
+	var main_key:String = get_tree().get_current_scene().get_scene_file_path()
+	var res:Dictionary = {}
+	var nodes:Array[Node] = get_tree().get_nodes_in_group(group)
+	for n in nodes:
+		var k:String = n.get_name() if n.is_unique_name_in_owner() else n.get_index()
+		res[k] = 
+
+func save_universal(group:StringName)->int:
+	var nodes:Array[Node] = get_tree().get_nodes_in_group(group)
+
+
+func load_file(file_name:String)->int:
+	var file:FileAccess = open(file_directory%file_name, ModeFlags.READ)
