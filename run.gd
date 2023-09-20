@@ -139,6 +139,15 @@ func string_parse_typecast():
 	print("---------PackedStringArray\t:\t%s\n%s"%[PackedStringArray(JSON.parse_string( JSON.stringify(PackedStringArray()))) is PackedStringArray, JSON.parse_string( JSON.stringify(PackedStringArray()))] )
 
 func _run():
+	const r:Resource = preload("res://addons/node_saver/scripts/resources/class_properties.gd")
+	var res:Resource = r.new()
+	res.set_name_of_class("lala")
+	print(res.get_name_of_class())
+	res.set_name_of_class("lolo")
+	print(res.get_name_of_class())
+	
+	
+	
 #	var regex:RegEx = RegEx.create_from_string("\"(\\d)(\\d)(\\d)\"")
 #	create_from_string("\"(?:\\\\.|[^\"])*\"")
 #	compile("/(\d)(\d)(\d)")
@@ -153,27 +162,26 @@ func _run():
 	
 #	print(regex.compile("123abc"))
 #	print(regex)
-	var subject := "abc"
-	var pattern := "."
-	var callback := func(text:String) -> String: return text + "&"
-
-	var regex := RegEx.new()
-	regex.compile(pattern)
-
-	var regex_matches := regex.search_all(subject)
-	var offset := 0
-	for regex_match in regex_matches:
-		var start := regex_match.get_start()
-		var end := regex_match.get_end()
-		var length := end - start
-		var text := subject.substr(start + offset, length)
-#		var replacement := str(callback.call(text))
-		var replacement := "&%s"%text
-		subject = (
-			subject.substr(0, start + offset)
-			+ replacement
-			+ subject.substr(end + offset)
-		)
-		offset += replacement.length() - text.length()
-
-	prints(subject)
+#	var subject := "abc"
+#	var pattern := "."
+#	var callback := func(text:String) -> String: return text + "&"
+#
+#	var regex := RegEx.new()
+#	regex.compile(pattern)
+#
+#	var regex_matches := regex.search_all(subject)
+#	var offset := 0
+#	for regex_match in regex_matches:
+#		var start := regex_match.get_start()
+#		var end := regex_match.get_end()
+#		var length := end - start
+#		var text := subject.substr(start + offset, length)
+##		var replacement := str(callback.call(text))
+#		var replacement := "&%s"%text
+#		subject = (
+#			subject.substr(0, start + offset)
+#			+ replacement
+#			+ subject.substr(end + offset)
+#		)
+#		offset += replacement.length() - text.length()
+#	prints(subject)

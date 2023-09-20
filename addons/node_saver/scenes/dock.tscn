@@ -1,7 +1,44 @@
-[gd_scene load_steps=5 format=3 uid="uid://dff53sge37ays"]
+[gd_scene load_steps=42 format=3 uid="uid://dff53sge37ays"]
 
 [ext_resource type="Script" path="res://addons/node_saver/scripts/dock.gd" id="1_xjwfd"]
+[ext_resource type="Texture2D" uid="uid://bximt6dhq82o5" path="res://addons/node_saver/icons/types/Object.svg" id="2_gegyb"]
+[ext_resource type="Texture2D" uid="uid://b4jiuxj1xdmp7" path="res://addons/node_saver/icons/types/bool.svg" id="2_j6b5y"]
+[ext_resource type="Texture2D" uid="uid://cukl5yuxvpumd" path="res://addons/node_saver/icons/types/int.svg" id="3_nnbbc"]
 [ext_resource type="Texture2D" uid="uid://dcnda0jo0lrpm" path="res://addons/node_saver/icons/Add.svg" id="4_gc1td"]
+[ext_resource type="Texture2D" uid="uid://c8medtc4x0j7n" path="res://addons/node_saver/icons/types/float.svg" id="4_uivmr"]
+[ext_resource type="Texture2D" uid="uid://n6ukecwmpao5" path="res://addons/node_saver/icons/types/String.svg" id="5_icrgg"]
+[ext_resource type="Texture2D" uid="uid://c51xc1ohfoeqh" path="res://addons/node_saver/icons/types/Vector2.svg" id="6_1p08c"]
+[ext_resource type="Texture2D" uid="uid://bxuy7i1niyt4d" path="res://addons/node_saver/icons/types/Vector2i.svg" id="7_5nkak"]
+[ext_resource type="Texture2D" uid="uid://d0tuv8swwixj8" path="res://addons/node_saver/icons/types/Rect2.svg" id="8_f87s6"]
+[ext_resource type="Texture2D" uid="uid://tbcwy8koykdi" path="res://addons/node_saver/icons/types/Rect2i.svg" id="9_q87uh"]
+[ext_resource type="Texture2D" uid="uid://bxuvqbll1v2rb" path="res://addons/node_saver/icons/types/Vector3.svg" id="10_qo7je"]
+[ext_resource type="Texture2D" uid="uid://c88f37f3tbfpr" path="res://addons/node_saver/icons/types/Vector3i.svg" id="11_qyb3p"]
+[ext_resource type="Texture2D" uid="uid://4t4xvpkxh5bk" path="res://addons/node_saver/icons/types/Transform2D.svg" id="12_brmrx"]
+[ext_resource type="Texture2D" uid="uid://cl2v5a73knpsf" path="res://addons/node_saver/icons/types/Vector4.svg" id="13_ioqwe"]
+[ext_resource type="Texture2D" uid="uid://c4xioowuk380c" path="res://addons/node_saver/icons/types/Vector4i.svg" id="14_x3rwu"]
+[ext_resource type="Texture2D" uid="uid://dta38gejv340f" path="res://addons/node_saver/icons/types/Plane.svg" id="15_nkycd"]
+[ext_resource type="Texture2D" uid="uid://dd51fpcsa45fg" path="res://addons/node_saver/icons/types/Quaternion.svg" id="16_4b513"]
+[ext_resource type="Texture2D" uid="uid://dtrt7txsppwfw" path="res://addons/node_saver/icons/types/AABB.svg" id="17_cuf8k"]
+[ext_resource type="Texture2D" uid="uid://sbdvbj2koqkw" path="res://addons/node_saver/icons/types/Basis.svg" id="18_k3beb"]
+[ext_resource type="Texture2D" uid="uid://bsoekoni40eoc" path="res://addons/node_saver/icons/types/Transform3D.svg" id="19_32d0e"]
+[ext_resource type="Texture2D" uid="uid://bto6rkbpcfvsx" path="res://addons/node_saver/icons/types/Projection.svg" id="20_1bbwm"]
+[ext_resource type="Texture2D" uid="uid://cx2mh8nxon01g" path="res://addons/node_saver/icons/types/Color.svg" id="21_ns5th"]
+[ext_resource type="Texture2D" uid="uid://b20gq6s4oy2l" path="res://addons/node_saver/icons/types/StringName.svg" id="22_17v6u"]
+[ext_resource type="Texture2D" uid="uid://bgf1qmm167fnb" path="res://addons/node_saver/icons/types/NodePath.svg" id="23_con3y"]
+[ext_resource type="Texture2D" uid="uid://xuoujqlburri" path="res://addons/node_saver/icons/types/RID.svg" id="24_o7s3h"]
+[ext_resource type="Texture2D" uid="uid://bw74qaiqmqn0u" path="res://addons/node_saver/icons/types/Callable.svg" id="26_prnox"]
+[ext_resource type="Texture2D" uid="uid://cenpj255ure31" path="res://addons/node_saver/icons/types/Signal.svg" id="27_83j5o"]
+[ext_resource type="Texture2D" uid="uid://dtdtiehdlcher" path="res://addons/node_saver/icons/types/Dictionary.svg" id="28_24eym"]
+[ext_resource type="Texture2D" uid="uid://bl2171wfrxo5t" path="res://addons/node_saver/icons/types/Array.svg" id="29_56pi4"]
+[ext_resource type="Texture2D" uid="uid://der7osvhlxflf" path="res://addons/node_saver/icons/types/PackedByteArray.svg" id="30_kdjrs"]
+[ext_resource type="Texture2D" uid="uid://clh71hx6s0mfc" path="res://addons/node_saver/icons/types/PackedInt32Array.svg" id="31_n2n6d"]
+[ext_resource type="Texture2D" uid="uid://0h0nwqe46jie" path="res://addons/node_saver/icons/types/PackedInt64Array.svg" id="32_6s4v2"]
+[ext_resource type="Texture2D" uid="uid://tt5iegureifs" path="res://addons/node_saver/icons/types/PackedFloat32Array.svg" id="33_o8ta8"]
+[ext_resource type="Texture2D" uid="uid://bkkouu5hkl28i" path="res://addons/node_saver/icons/types/PackedFloat64Array.svg" id="34_nymg0"]
+[ext_resource type="Texture2D" uid="uid://be8hedi0u8w8s" path="res://addons/node_saver/icons/types/PackedStringArray.svg" id="35_x6485"]
+[ext_resource type="Texture2D" uid="uid://bdoewxo728xis" path="res://addons/node_saver/icons/types/PackedVector2Array.svg" id="36_j66q5"]
+[ext_resource type="Texture2D" uid="uid://l8r2r75fcwhh" path="res://addons/node_saver/icons/types/PackedVector3Array.svg" id="37_nx6s6"]
+[ext_resource type="Texture2D" uid="uid://5ft0qshxnqjf" path="res://addons/node_saver/icons/types/PackedColorArray.svg" id="38_imrjc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kfxux"]
 bg_color = Color(0.128906, 0.148438, 0.179688, 1)
@@ -89,9 +126,132 @@ size_flags_vertical = 3
 [node name="extra" type="HBoxContainer" parent="."]
 layout_mode = 2
 
-[node name="adder" type="Button" parent="extra"]
+[node name="orden" type="HBoxContainer" parent="extra"]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="type" type="OptionButton" parent="extra/orden"]
+layout_mode = 2
+size_flags_horizontal = 3
+clip_text = true
+item_count = 37
+fit_to_longest_item = false
+popup/item_0/text = "bool"
+popup/item_0/icon = ExtResource("2_j6b5y")
+popup/item_0/id = 0
+popup/item_1/text = "int"
+popup/item_1/icon = ExtResource("3_nnbbc")
+popup/item_1/id = 1
+popup/item_2/text = "float"
+popup/item_2/icon = ExtResource("4_uivmr")
+popup/item_2/id = 2
+popup/item_3/text = "String"
+popup/item_3/icon = ExtResource("5_icrgg")
+popup/item_3/id = 3
+popup/item_4/text = "Vector2"
+popup/item_4/icon = ExtResource("6_1p08c")
+popup/item_4/id = 4
+popup/item_5/text = "Vector2i"
+popup/item_5/icon = ExtResource("7_5nkak")
+popup/item_5/id = 5
+popup/item_6/text = "Rect2"
+popup/item_6/icon = ExtResource("8_f87s6")
+popup/item_6/id = 6
+popup/item_7/text = "Rect2i"
+popup/item_7/icon = ExtResource("9_q87uh")
+popup/item_7/id = 7
+popup/item_8/text = "Vector3"
+popup/item_8/icon = ExtResource("10_qo7je")
+popup/item_8/id = 8
+popup/item_9/text = "Vector3i"
+popup/item_9/icon = ExtResource("11_qyb3p")
+popup/item_9/id = 9
+popup/item_10/text = "Transform2D"
+popup/item_10/icon = ExtResource("12_brmrx")
+popup/item_10/id = 10
+popup/item_11/text = "Vector4"
+popup/item_11/icon = ExtResource("13_ioqwe")
+popup/item_11/id = 11
+popup/item_12/text = "Vector4i"
+popup/item_12/icon = ExtResource("14_x3rwu")
+popup/item_12/id = 12
+popup/item_13/text = "Plane"
+popup/item_13/icon = ExtResource("15_nkycd")
+popup/item_13/id = 13
+popup/item_14/text = "Quaternion"
+popup/item_14/icon = ExtResource("16_4b513")
+popup/item_14/id = 14
+popup/item_15/text = "AABB"
+popup/item_15/icon = ExtResource("17_cuf8k")
+popup/item_15/id = 15
+popup/item_16/text = "Basis"
+popup/item_16/icon = ExtResource("18_k3beb")
+popup/item_16/id = 16
+popup/item_17/text = "Transform3D"
+popup/item_17/icon = ExtResource("19_32d0e")
+popup/item_17/id = 17
+popup/item_18/text = "Projection"
+popup/item_18/icon = ExtResource("20_1bbwm")
+popup/item_18/id = 18
+popup/item_19/text = "Color"
+popup/item_19/icon = ExtResource("21_ns5th")
+popup/item_19/id = 19
+popup/item_20/text = "StringName"
+popup/item_20/icon = ExtResource("22_17v6u")
+popup/item_20/id = 20
+popup/item_21/text = "NodePath"
+popup/item_21/icon = ExtResource("23_con3y")
+popup/item_21/id = 21
+popup/item_22/text = "RID"
+popup/item_22/icon = ExtResource("24_o7s3h")
+popup/item_22/id = 22
+popup/item_23/text = "Object"
+popup/item_23/icon = ExtResource("2_gegyb")
+popup/item_23/id = 23
+popup/item_24/text = "Callable"
+popup/item_24/icon = ExtResource("26_prnox")
+popup/item_24/id = 24
+popup/item_25/text = "Signal"
+popup/item_25/icon = ExtResource("27_83j5o")
+popup/item_25/id = 25
+popup/item_26/text = "Dictionary"
+popup/item_26/icon = ExtResource("28_24eym")
+popup/item_26/id = 26
+popup/item_27/text = "Array"
+popup/item_27/icon = ExtResource("29_56pi4")
+popup/item_27/id = 27
+popup/item_28/text = "PackedByteArray"
+popup/item_28/icon = ExtResource("30_kdjrs")
+popup/item_28/id = 28
+popup/item_29/text = "PackedInt32Array"
+popup/item_29/icon = ExtResource("31_n2n6d")
+popup/item_29/id = 29
+popup/item_30/text = "PackedInt64Array"
+popup/item_30/icon = ExtResource("32_6s4v2")
+popup/item_30/id = 30
+popup/item_31/text = "PackedFloat32Array"
+popup/item_31/icon = ExtResource("33_o8ta8")
+popup/item_31/id = 31
+popup/item_32/text = "PackedFloat64Array"
+popup/item_32/icon = ExtResource("34_nymg0")
+popup/item_32/id = 32
+popup/item_33/text = "PackedStringArray"
+popup/item_33/icon = ExtResource("35_x6485")
+popup/item_33/id = 33
+popup/item_34/text = "PackedVector2Array"
+popup/item_34/icon = ExtResource("36_j66q5")
+popup/item_34/id = 34
+popup/item_35/text = "PackedVector3Array"
+popup/item_35/icon = ExtResource("37_nx6s6")
+popup/item_35/id = 35
+popup/item_36/text = "PackedColorArray"
+popup/item_36/icon = ExtResource("38_imrjc")
+popup/item_36/id = 36
+
+[node name="adder" type="Button" parent="extra/orden"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
 text = "add method"
 icon = ExtResource("4_gc1td")
 
@@ -105,6 +265,17 @@ layout_mode = 2
 size_flags_horizontal = 3
 placeholder_text = "getter_method"
 
-[node name="singleton" type="Button" parent="."]
+[node name="singleton" type="HBoxContainer" parent="."]
 layout_mode = 2
+
+[node name="build" type="Button" parent="singleton"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
 text = "rebuild saver singleton"
+
+[node name="configure" type="Button" parent="singleton"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "configure
+"

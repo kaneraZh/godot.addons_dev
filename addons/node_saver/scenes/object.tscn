@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgyuc75h3y2u8"]
+
+[ext_resource type="Script" path="res://addons/node_saver/scripts/object.gd" id="1_t44dm"]
+[ext_resource type="Texture2D" uid="uid://bximt6dhq82o5" path="res://addons/node_saver/icons/types/Object.svg" id="2_16owj"]
+[ext_resource type="Texture2D" uid="uid://bwibrm6vtmcci" path="res://addons/node_saver/icons/Remove.svg" id="2_jnan1"]
+[ext_resource type="Texture2D" uid="uid://n6ukecwmpao5" path="res://addons/node_saver/icons/types/String.svg" id="3_280mf"]
+
+[node name="object" type="HBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t44dm")
+metadata/_edit_group_ = true
+
+[node name="behaviour" type="OptionButton" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+clip_text = true
+item_count = 3
+selected = 0
+fit_to_longest_item = false
+popup/item_0/text = "%s"
+popup/item_0/icon = ExtResource("2_16owj")
+popup/item_0/id = 0
+popup/item_1/text = "str(%s)"
+popup/item_1/icon = ExtResource("3_280mf")
+popup/item_1/id = 1
+popup/item_2/text = "%s.get_path()"
+popup/item_2/icon = ExtResource("2_16owj")
+popup/item_2/id = 2
+
+[node name="setter" type="LineEdit" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "set_property"
+
+[node name="order" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="getter" type="LineEdit" parent="order"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "get_property"
+
+[node name="delete" type="Button" parent="order"]
+visible = false
+layout_mode = 2
+icon = ExtResource("2_jnan1")

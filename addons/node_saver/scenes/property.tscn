@@ -1,19 +1,26 @@
-[gd_scene load_steps=2 format=3 uid="uid://b7b5apckhffm0"]
+[gd_scene load_steps=4 format=3 uid="uid://b7b5apckhffm0"]
 
 [ext_resource type="Script" path="res://addons/node_saver/scripts/property.gd" id="1_slrl5"]
+[ext_resource type="Texture2D" uid="uid://bwibrm6vtmcci" path="res://addons/node_saver/icons/Remove.svg" id="2_0pohw"]
+[ext_resource type="Texture2D" uid="uid://c8medtc4x0j7n" path="res://addons/node_saver/icons/types/float.svg" id="2_mdkty"]
 
 [node name="property" type="HBoxContainer"]
+modulate = Color(1, 1, 1, 0.627451)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -756.0
+offset_bottom = -596.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_slrl5")
+metadata/_edit_group_ = true
 
 [node name="active" type="CheckBox" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "property"
+icon = ExtResource("2_mdkty")
 clip_text = true
 
 [node name="setter" type="LineEdit" parent="."]
@@ -21,7 +28,16 @@ layout_mode = 2
 size_flags_horizontal = 3
 placeholder_text = "set_property"
 
-[node name="getter" type="LineEdit" parent="."]
+[node name="order" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="getter" type="LineEdit" parent="order"]
 layout_mode = 2
 size_flags_horizontal = 3
 placeholder_text = "get_property"
+
+[node name="delete" type="Button" parent="order"]
+visible = false
+layout_mode = 2
+icon = ExtResource("2_0pohw")

@@ -18,6 +18,5 @@ func save_main_scene(group:StringName)->int:
 func save_universal(group:StringName)->int:
 	var nodes:Array[Node] = get_tree().get_nodes_in_group(group)
 
-
 func load_file(file_name:String)->int:
 	var file:FileAccess = open(file_directory%file_name, ModeFlags.READ)

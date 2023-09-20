@@ -1,0 +1,2 @@
+all icons found at:
+https://github.com/godotengine/godot/tree/master/editor/icons
